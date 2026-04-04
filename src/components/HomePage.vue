@@ -6,6 +6,14 @@ import ArrowRight from '../assets/arrow-right.svg'
 import Experience from './Experience.vue';
 import Projects from './Projects.vue';
 import Skills from './Skills.vue';
+import { useRouter } from 'vue-router';
+
+const router=useRouter()
+
+const handleNavigateExperience=()=>{
+  router.push('/experience')
+}
+
 </script>
 
 <template>
@@ -36,7 +44,7 @@ import Skills from './Skills.vue';
         <div class="homepageDiv__expDiv">
           <Flask class="homepageDiv__flaskicon"/>
           <p class="homepageDiv__expBoxText">EXPLORE MY EXPERIENCE AND JOURNEY</p>
-          <div class="homepageDiv__arrowOuter">
+          <div class="homepageDiv__arrowOuter" @click="handleNavigateExperience">
             <ArrowRight class="homepageDiv__arrowRightIcon"/>
           </div>
         </div>
@@ -220,6 +228,7 @@ import Skills from './Skills.vue';
       align-items: center;
       justify-content: center;
       cursor: pointer;
+      user-select: none;
     }
 
     &__arrowOuterOfproj{
