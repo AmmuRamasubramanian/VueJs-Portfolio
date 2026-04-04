@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import HomePage from './components/HomeComponents/HomePage.vue';
 import ExperiencePage from './components/ExperiencePage.vue'
 import RealTimeProjPage from './components/RealTimeProjPage.vue'
+import ShadcnCompsPage from './components/Shadcncomponents/ShadcnCompsPage.vue'
 
 const routes = [
   {
@@ -18,6 +19,16 @@ const routes = [
     path: '/realtime-projects',
     name: 'realtime-projects',
     component: RealTimeProjPage
+  },
+  {
+    path: '/realtime-projects',
+    name: 'realtime-projects',
+    component: RealTimeProjPage
+  },
+  {
+    path: '/shadcncomponents',
+    name: 'shadcncomponents',
+    component: ShadcnCompsPage
   }
 ];
 
