@@ -5,6 +5,7 @@ import Table from '../assets/table.svg'
 import ArrowRight from '../assets/arrow-right.svg'
 import Experience from './Experience.vue';
 import Projects from './Projects.vue';
+import Skills from './Skills.vue';
 </script>
 
 <template>
@@ -52,6 +53,8 @@ import Projects from './Projects.vue';
       <Experience/>
       <!-- //--------------------------- -->
       <Projects/>
+      <!-- //--------------------------- -->
+      <Skills/>
     </div>
   </div>
 </template>
