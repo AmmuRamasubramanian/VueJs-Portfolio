@@ -3,6 +3,10 @@ import MeetingImg from '../../assets/meetingImg.jpeg'
 import ChatImg from '../../assets/chatImg.jpeg'
 import ChartImg from '../../assets/chartImg.jpeg'
 import Arrowupright from '../../assets/arrowupright.svg'
+import ChevronRight from '../../assets/chevronright.svg'
+import { useRouter } from 'vue-router'
+
+const router=useRouter()
 
 const projects = [
   {
@@ -24,6 +28,11 @@ const projects = [
     description: "Created a reusable charting system with customizable, hand-drawn style visualizations."
   },
 ]
+
+const handleNavigateRealtimeproj=()=>{
+  router.push('/realtime-projects')
+  window.scrollTo(0, 0);
+}
 </script>
 
 <template>
@@ -51,6 +60,10 @@ const projects = [
                 <Arrowupright class="projectsdiv__arrowupright"/>
             </div>
         </div>
+    </div>
+    <div class="projectsdiv__showmorediv" @click="handleNavigateRealtimeproj">
+        <p class="projectsdiv__showmoreText">Show more</p>
+        <ChevronRight class="projectsdiv__showmoreIcon"/>
     </div>
   </div>
 </template>
@@ -151,6 +164,29 @@ const projects = [
             height:13px;
             min-height:13px;
             fill:#F46C38;
+        }
+
+        &__showmorediv{
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        &__showmoreText{
+            color:var(--redColor);
+            font-family: var(--poppins);
+            font-size: 1em;
+            margin-right: 5px;
+        }
+
+        &__showmoreIcon{
+            width: 16px;
+            height:16px;
+            min-width:16px;
+            min-height: 16px;
+            fill:var(--redColor)
         }
     }
   
