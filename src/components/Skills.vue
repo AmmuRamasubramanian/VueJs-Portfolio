@@ -41,7 +41,8 @@ const skills = [
     <p class="skillsdiv__title2">SKILLS</p>
     <div class="skillsdiv__skillflexdiv">
     <div 
-        v-for="(item, index) in skills"
+        v-for="(item) in skills"
+        :key="item.name"
     >
         <div class="skillsdiv__skillitemdiv">
             <div class="skillsdiv__skillavatarDiv">
@@ -96,16 +97,7 @@ const skills = [
             height: 90px;
             min-width: 90px;
             min-height: 90px;
-            clip-path: polygon(
-                30% 0%, 
-                70% 0%, 
-                100% 30%, 
-                100% 70%, 
-                70% 100%, 
-                30% 100%, 
-                0% 70%, 
-                0% 30%
-            );
+            border-radius: 90px;
             background: linear-gradient(135deg, #4e4e8c, #2a2a50);
             box-shadow: 0 6px 12px rgba(0,0,0,0.4), 0 0 12px rgba(78,78,140,0.3);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
