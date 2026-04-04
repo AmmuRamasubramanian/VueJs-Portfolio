@@ -101,7 +101,7 @@ const handleNavigateRealtimeproj=()=>{
     }
 
     &__title2{
-      color:rgba(182, 181, 189, 0.2);
+      color:var(--lightishwhite);
       font-size:5.2em;
       font-family: var(--poppins);
       font-weight: 700;

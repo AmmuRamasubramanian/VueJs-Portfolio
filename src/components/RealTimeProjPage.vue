@@ -99,7 +99,7 @@ const projects = [
         }
 
         &__title2{
-            color:rgba(182, 181, 189, 0.2);
+            color:var(--lightishwhite);
             font-size:4.5em;
             font-family: var(--poppins);
             font-weight: 700;
@@ -107,7 +107,7 @@ const projects = [
         }
 
         &__avatarOuter{
-            background-color: rgba(182, 181, 189, 0.2);
+            background-color: var(--lightishwhite);
             padding:1px;
             border-radius: 10px;
             align-items: center;
