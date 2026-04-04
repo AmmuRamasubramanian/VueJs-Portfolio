@@ -77,7 +77,7 @@ const projects = [
         }
 
         &__avatarOuter{
-            background-color: white;
+            background-color: rgba(182, 181, 189, 0.2);
             padding:1px;
             border-radius: 10px;
             align-items: center;

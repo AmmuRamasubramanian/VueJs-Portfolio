@@ -4,7 +4,6 @@ import Flask from '../assets/flask.svg'
 import Table from '../assets/table.svg'
 import ArrowRight from '../assets/arrow-right.svg'
 import Experience from './Experience.vue';
-import Skills from './Skills.vue';
 import Projects from './Projects.vue';
 </script>
 
@@ -35,7 +34,7 @@ import Projects from './Projects.vue';
       <div class="homepageDiv__expAndProjflex">
         <div class="homepageDiv__expDiv">
           <Flask class="homepageDiv__flaskicon"/>
-          <p class="homepageDiv__expBoxText">EXPLORE EXPERIENCES</p>
+          <p class="homepageDiv__expBoxText">EXPLORE MY EXPERIENCE AND JOURNEY</p>
           <div class="homepageDiv__arrowOuter">
             <ArrowRight class="homepageDiv__arrowRightIcon"/>
           </div>
@@ -43,7 +42,7 @@ import Projects from './Projects.vue';
         <div class="homepageDiv__expAndProjgap"></div>
         <div class="homepageDiv__projBoxDiv">
           <Table class="homepageDiv__tableicon"/>
-          <p class="homepageDiv__projtext">EXPLORE PROJECTS</p>
+          <p class="homepageDiv__projtext">EXPLORE MY PROJECTS AND WHAT I’VE BUILT</p>
           <div class="homepageDiv__arrowOuterOfproj">
             <ArrowRight class="homepageDiv__arrowRightIconOfProj"/>
           </div>
@@ -136,14 +135,15 @@ import Projects from './Projects.vue';
       display: flex;
       align-items: center;
       flex-direction: row;
+      width:90%;
       margin-top: 2.3em;
     }
 
     &__expDiv{
-      background: linear-gradient(90deg, #F46C38, #E6A085);
-      height: 150px;
-      min-height: 150px;
-      border-radius: 10px;
+      background:linear-gradient(135deg, #C24E2A, #F08A5D);
+      height: 160px;
+      min-height: 160px;
+      border-radius: 15px;
       width: 47%;
       display: flex;
       justify-content: center;
@@ -153,10 +153,10 @@ import Projects from './Projects.vue';
     }
 
     &__projBoxDiv{
-      background: linear-gradient(135deg, #C5FF41, #6CE3B6);
-      height: 150px;
-      min-height: 150px;
-      border-radius: 10px;
+      background: linear-gradient(135deg, #6DBE45, #B4EC51);
+      height: 160px;
+      min-height: 160px;
+      border-radius: 15px;
       width: 47%;
       display: flex;
       justify-content: center;
