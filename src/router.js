@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomePage from './components/HomePage.vue';
 import ExperiencePage from './components/ExperiencePage.vue'
+import RealTimeProjPage from './components/RealTimeProjPage.vue'
 
 const routes = [
   {
@@ -12,6 +13,11 @@ const routes = [
     path: '/experience',
     name: 'experience',
     component: ExperiencePage
+  },
+  {
+    path: '/realtime-projects',
+    name: 'realtime-projects',
+    component: RealTimeProjPage
   }
 ];
 
