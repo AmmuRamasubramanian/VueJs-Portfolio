@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import CardComponent from './CardComponent.vue';
-import Flask from '../assets/flask.svg'
-import Table from '../assets/table.svg'
-import ArrowRight from '../assets/arrow-right.svg'
+import CardComponent from '../CardComponent.vue';
+import Flask from '../../assets/flask.svg'
+import Table from '../../assets/table.svg'
+import ArrowRight from '../../assets/arrow-right.svg'
 import Experience from './Experience.vue';
 import Projects from './Projects.vue';
 import Skills from './Skills.vue';

@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import ReactImg from '../assets/reactImg.png'
-import JsImg from '../assets/jsImg.png'
-import CssImg from '../assets/cssImg.png'
-import FigmaImg from '../assets/figmaImg.png'
-import ReactNativeImg from '../assets/reactNativeImg.png'
-import vueImg from '../assets/vueImg.png'
+import ReactImg from '../../assets/reactImg.png'
+import JsImg from '../../assets/jsImg.png'
+import CssImg from '../../assets/cssImg.png'
+import FigmaImg from '../../assets/figmaImg.png'
+import ReactNativeImg from '../../assets/reactNativeImg.png'
+import vueImg from '../../assets/vueImg.png'
 
 const skills = [
   {

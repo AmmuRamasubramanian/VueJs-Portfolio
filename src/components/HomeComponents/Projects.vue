@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import MeetingImg from '../assets/meetingImg.jpeg'
-import ChatImg from '../assets/chatImg.jpeg'
-import ChartImg from '../assets/chartImg.jpeg'
-import Arrowupright from '../assets/arrowupright.svg'
+import MeetingImg from '../../assets/meetingImg.jpeg'
+import ChatImg from '../../assets/chatImg.jpeg'
+import ChartImg from '../../assets/chartImg.jpeg'
+import Arrowupright from '../../assets/arrowupright.svg'
 
 const projects = [
   {
