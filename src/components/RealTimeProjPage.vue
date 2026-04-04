@@ -5,6 +5,7 @@ import ChatImg from '../assets/chatImg.jpeg'
 import ChartImg from '../assets/chartImg.jpeg'
 import Arrowupright from '../assets/arrowupright.svg'
 import richtexteditor from '../assets/richtexteditor.png'
+import roles from '../assets/roles.png'
 
 const projects = [
   {
@@ -30,6 +31,12 @@ const projects = [
     avatar: richtexteditor,
     title: "Notion-Style Rich Text Editor",
     description: " Built a fully customizable rich text editor inspired by Notion."
+  },
+  {
+    id: 5,
+    avatar: roles,
+    title: "Interactive Org Chart",
+    description: "Implemented role-based hierarchy visualization for organizational employees using React Flow."
   }
 ]
 </script>
