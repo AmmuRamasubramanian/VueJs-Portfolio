@@ -1,0 +1,35 @@
+:root {
+  --primarybgColor:     #151312;
+  --redColor:#fe7b01;
+  --redColor_2:#FF7A00;
+  --courierPrime: "Courier Prime", monospace;
+  --poppins:"Poppins", sans-serif;
+  --bluishSteelBlue:#90a6c5;
+  --lightBlueGray:#232C3B;
+  --hoveredPrimaryBgColor:#0F1319;
+  --purpleBlueBtnColor:#3551be;
+   --btncolor-darkerBlue: #5C64D2;
+  --MAXASSIGN_WIDTH:800px;
+  --MINASSIGN_WIDTH:600px
+}
+
+input{
+  border: none; 
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+
+textarea{
+  border: none; 
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "Avenir-Medium";
+  src: local("Avenir-Medium"),
+    url("../fonts/avenir/AvenirLTStd-Medium.ttf") format("truetype");
+}
+
