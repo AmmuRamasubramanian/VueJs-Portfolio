@@ -1,19 +1,27 @@
 <script setup lang="ts">
+import MeetingImg from '../assets/meetingImg.jpeg'
+import ChatImg from '../assets/chatImg.jpeg'
+import ChartImg from '../assets/chartImg.jpeg'
+import Arrowupright from '../assets/arrowupright.svg'
+
 const projects = [
   {
-    id:1,
+    id: 1,
+    avatar: ChatImg,
     title: "Real-Time Chat System",
-    description: "Built a scalable chat platform with real-time messaging using WebSockets, supporting one-on-one and group conversations.Implemented audio/video calls, media sharing, message management, and interactive UI with live updates."
+    description: "Built a real-time chat platform with messaging, calls, media sharing, and interactive UI."
   },
   {
-    id:2,
+    id: 2,
+    avatar: MeetingImg,
     title: "Meeting Scheduling Platform",
-    description:"Developed a cross-platform scheduling system (Web & Mobile) with real-time booking, availability management, and shareable links.Handled end-to-end architecture, UI/UX, API integration, and synchronization across platforms."
+    description: "Developed a cross-platform scheduling system with real-time booking and availability management."
   },
   {
-    id:3,
+    id: 3,
+    avatar: ChartImg,
     title: "Custom Charting Library",
-    description: "Built a reusable charting system using Rough.js with bar, pie, and stacked charts for web and mobile.Focused on performance, customization, and unique hand-drawn style visualizations."
+    description: "Created a reusable charting system with customizable, hand-drawn style visualizations."
   }
 ]
 </script>
@@ -26,12 +34,22 @@ const projects = [
         v-for="(projItem, projIndex) in projects"
         :key="projItem.id"
     >
-        <div :class="{
-            'projectsdiv__projItem':projIndex!=0,
-            'projectsdiv__projItem--marginTopGap':projIndex==0
-        }">
+        <div :class="[
+            'projectsdiv__projItem',
+            {'projectsdiv__projItem--marginTopGap':projIndex==0}
+        ]">
+            <div class="projectsdiv__projinneritem">
+            <div class="projectsdiv__avatarOuter">
+                <img :src="projItem.avatar" class="projectsdiv__avatar"/>
+            </div>
+            <div class="projectsdiv__projinnerdiv">
             <p class="projectsdiv__projName">{{ projItem.title }}</p>
             <p class="projectsdiv__projdesc">{{ projItem.description }}</p>
+            </div>
+            </div>
+            <div>
+                <Arrowupright class="projectsdiv__arrowupright"/>
+            </div>
         </div>
     </div>
   </div>
@@ -58,18 +76,55 @@ const projects = [
             margin-top:-20px;
         }
 
+        &__avatarOuter{
+            background-color: white;
+            padding:1px;
+            border-radius: 10px;
+            align-items: center;
+            display: flex;
+        }
+
+        &__avatar{
+            width: 100px;
+            height: 100px;
+            min-width: 100px;
+            min-height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        &__projinnerdiv{
+            display: flex;
+            flex-direction: column;
+            margin-left:20px;
+        }
+
         &__projItem{
-            margin-top: 30px;
+            margin-top: 25px;
+            display: flex;
+            padding:10px;
+            cursor: pointer;
+            border-radius: 10px;
+
             &--marginTopGap{
                 margin-top:10px;
             }
+
+            &:hover{
+                background-color: #1d1b1a;
+            }
+        }
+
+        &__projinneritem{
+            display: flex;
+            align-items: center;
         }
 
         &__projName{
             color:white;
-            font-size: 1.4em;
+            font-size: 1.1em;
             font-family: var(--poppins);
-            font-weight: 600;
+            font-weight: 500;
         }
 
         &__projdesc{
@@ -77,17 +132,25 @@ const projects = [
             font-size: 0.82em;
             font-family: var(--poppins);
             font-weight: 400;
-            margin-top:4px;
+            margin-top:6px;
             line-height: 22px;
         }
 
         &__projtimeline{
             color:#998F8F;
-            font-size: 0.85em;
+            font-size: 0.8em;
             font-family: var(--poppins);
             font-weight: 400;
             margin-top:12px;
             line-height: 22px;
+        }
+
+        &__arrowupright{
+            width:13px;
+            min-width:13px;
+            height:13px;
+            min-height:13px;
+            fill:#F46C38;
         }
     }
   
