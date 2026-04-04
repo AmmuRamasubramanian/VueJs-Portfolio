@@ -77,6 +77,7 @@ const handleNavigateRealtimeproj=()=>{
     flex-direction: row;
     align-items: flex-start;
     padding-top:3em;
+    padding-bottom: 6em;
 
     &__margingap{
       margin-right: 350px;
