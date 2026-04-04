@@ -22,7 +22,7 @@ const projects = [
     avatar: ChartImg,
     title: "Custom Charting Library",
     description: "Created a reusable charting system with customizable, hand-drawn style visualizations."
-  }
+  },
 ]
 </script>
 

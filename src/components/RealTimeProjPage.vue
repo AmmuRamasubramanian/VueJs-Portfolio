@@ -4,6 +4,7 @@ import MeetingImg from '../assets/meetingImg.jpeg'
 import ChatImg from '../assets/chatImg.jpeg'
 import ChartImg from '../assets/chartImg.jpeg'
 import Arrowupright from '../assets/arrowupright.svg'
+import richtexteditor from '../assets/richtexteditor.png'
 
 const projects = [
   {
@@ -23,6 +24,12 @@ const projects = [
     avatar: ChartImg,
     title: "Custom Charting Library",
     description: "Created a reusable charting system with customizable, hand-drawn style visualizations."
+  },
+  {
+    id: 4,
+    avatar: richtexteditor,
+    title: "Notion-Style Rich Text Editor",
+    description: " Built a fully customizable rich text editor inspired by Notion."
   }
 ]
 </script>
@@ -134,6 +141,7 @@ const projects = [
         &__projinneritem{
             display: flex;
             align-items: center;
+            flex:1;
         }
 
         &__projName{
