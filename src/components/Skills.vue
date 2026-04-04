@@ -101,7 +101,6 @@ const skills = [
             background: linear-gradient(135deg, #4e4e8c, #2a2a50);
             box-shadow: 0 6px 12px rgba(0,0,0,0.4), 0 0 12px rgba(78,78,140,0.3);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
         }
 
         &__skillname{
