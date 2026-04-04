@@ -1,12 +1,10 @@
 <script setup lang="ts">
-import HomePage from './components/HomePage.vue';
-
 </script>
 
 <template>
   <div class="contentdiv">
     <div class="contentdiv__container">
-     <HomePage/>
+     <router-view />
     </div>
   </div>
 </template>
