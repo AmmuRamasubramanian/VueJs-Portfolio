@@ -3,6 +3,19 @@ import Blog from '../assets/blog.svg'
 import Instagram from '../assets/instagram.svg'
 import Linkedin from '../assets/linkedin.svg'
 import Fire from '../assets/fire.svg'
+
+const handleOpenLinkedIn=()=>{
+  window.open('https://www.linkedin.com/in/sivagnanasowndaryar/', '_blank')
+}
+
+const handleOpenInsta=()=>{
+  window.open('https://www.instagram.com/ammu_ramasubramanian/', '_blank')
+}
+
+const handleOpenBlogs=()=>{
+  window.open('https://medium.com/@sivagnanasowndarya', '_blank')
+}
+
 </script>
 
 <template>
@@ -28,15 +41,15 @@ import Fire from '../assets/fire.svg'
     <div>
         <p class="carddiv__subtext">A frontend software developer who enjoys solving new challenges every day.</p>
         <div class="carddiv__footercontainer">
-          <div class="carddiv__footericonouter">
+          <div class="carddiv__footericonouter" @click="handleOpenBlogs">
             <Blog class="carddiv__footericon"/>
           </div>
           <div class="carddiv__footergap"/>
-          <div class="carddiv__footericonouter">
+          <div class="carddiv__footericonouter" @click="handleOpenInsta">
             <Instagram class="carddiv__footericon"/>
           </div>
           <div class="carddiv__footergap"/>
-          <div class="carddiv__footericonouter">
+          <div class="carddiv__footericonouter" @click="handleOpenLinkedIn">
             <Linkedin class="carddiv__footericon"/>
           </div>
         </div>
