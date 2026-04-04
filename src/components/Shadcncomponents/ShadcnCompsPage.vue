@@ -7,6 +7,7 @@ import AlertAccordianFlow from './Alert/AlertAccordianFlow.vue';
 <template>
   <div class="shadcncomppage">
     <div class="shadcncomppage__contentinnerDiv">
+    <p class="shadcncomppage__maintitle">Shadcn Reusable components</p>
     <p class="shadcncomppage__title">Basic Accordian</p>
     <div class="shadcncomppage__vertgap"></div>
     <BasicAccordianFlow/>
@@ -82,17 +83,28 @@ import AlertAccordianFlow from './Alert/AlertAccordianFlow.vue';
       margin-top:1.5em;
     }
 
+    &__maintitle{
+        color:white;
+        font-family: var(--poppins);
+        font-size:2em;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 1.5em;
+    }
+
     &__title{
       color:var(--btncolor-darkerBlue);
       font-family: var(--poppins);
-      font-size:1em;
+      font-size:1.1em;
+      font-weight: 500;
     }
 
     &__subtitle{
       color:var(--bluishSteelBlue);
       font-family: var(--poppins);
-      font-size:0.8em;
+      font-size:0.85em;
       margin-top:10px;
+      line-height: 22px;
     }
   }
 </style>

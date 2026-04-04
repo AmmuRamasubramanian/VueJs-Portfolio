@@ -66,7 +66,7 @@ const handleActivateand=(index:number)=>{
         &__qn{
             color:white;
             font-family: var(--poppins);
-            font-size: 0.7em;
+            font-size: 0.78em;
             line-height: 19px;
             margin-right: 10px;
             border-bottom-width: 0.8px;
@@ -89,7 +89,7 @@ const handleActivateand=(index:number)=>{
         &__ans{
             color:white;
             font-family: var(--poppins);
-            font-size: 0.7em;
+            font-size: 0.78em;
             margin-top:7px;
             line-height: 19px;
         }
