@@ -14,6 +14,10 @@ const handleNavigateExperience=()=>{
   router.push('/experience')
 }
 
+const handleNavigateRealtimeproj=()=>{
+  router.push('/realtime-projects')
+}
+
 </script>
 
 <template>
@@ -52,7 +56,7 @@ const handleNavigateExperience=()=>{
         <div class="homepageDiv__projBoxDiv">
           <Table class="homepageDiv__tableicon"/>
           <p class="homepageDiv__projtext">EXPLORE MY PROJECTS AND WHAT I’VE BUILT</p>
-          <div class="homepageDiv__arrowOuterOfproj">
+          <div class="homepageDiv__arrowOuterOfproj" @click="handleNavigateRealtimeproj">
             <ArrowRight class="homepageDiv__arrowRightIconOfProj"/>
           </div>
         </div>
