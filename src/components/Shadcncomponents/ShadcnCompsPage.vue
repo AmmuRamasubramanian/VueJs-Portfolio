@@ -3,6 +3,7 @@ import BasicAccordianFlow from './Accordian/BasicAccordianFlow.vue';
 import AlertAccordianFlow from './Alert/AlertAccordianFlow.vue';
 import AlertDialogFlow from './AlertDialog/AlertDialogFlow.vue';
 import LinkComp from './Link/LinkComp.vue';
+import Shield from '../../assets/shield.svg'
 
 </script>
 
@@ -129,6 +130,14 @@ import LinkComp from './Link/LinkComp.vue';
       title="Visit our document"
       subtitle="Learn how to get started with our components."
       :withoutbg="true"
+    />
+    <div :style="{marginTop:'10px'}"></div>
+    <LinkComp
+      title="Security Alert"
+      subtitle="New login detected from unknown device."
+      :withbtn="true"
+      btnTitle="Review"
+      :btnicon="Shield"
     />
     </div>
     </div>

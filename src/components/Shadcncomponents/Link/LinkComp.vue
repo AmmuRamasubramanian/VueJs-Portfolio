@@ -1,11 +1,13 @@
 <script setup lang="ts">
-
 import ChevronRight from '../../../assets/chevronright.svg'
 
 interface Props{
     title:string
     subtitle:string
     withoutbg?:boolean
+    withbtn?:boolean
+    btnTitle?:string
+    btnicon?:string
 }
 
 const props=defineProps<Props>()
@@ -13,12 +15,20 @@ const props=defineProps<Props>()
 </script>
 
 <template>
-    <div :class="['linkcomp cursordiv', {'linkcomp--withnobg':props.withoutbg}]">
+    <div :class="['linkcomp', {'linkcomp--withnobg':props.withoutbg}, {'cursordiv':!props.withbtn}]">
+        <div v-if="props.withbtn" class="linkcomp__iconouter">
+            <component :is="props.btnicon" class="linkcomp__infoicon"/>
+        </div>
         <div class="linkcomp__titlediv">
         <p class="linkcomp__title">{{ props.title }}</p>
         <p class="linkcomp__subtitle">{{ props.subtitle }}</p>
         </div>
+        <div v-if="!props.withbtn">
         <ChevronRight class="linkcomp__chevronRightIcon"/>
+        </div>
+        <div class="linkcomp__btnouter cursordiv" v-if="props.withbtn">
+            <p class="linkcomp__btntext">{{ props.btnTitle }}</p>
+        </div>
     </div>
 </template>
 
@@ -83,6 +93,36 @@ const props=defineProps<Props>()
             min-width: 14px;
             min-height: 14px;
             fill:white;
+        }
+
+        &__iconouter{
+            margin-right: 10px;
+        }
+
+        &__infoicon{
+            width:14px;
+            height:14px;
+            min-width: 14px;
+            min-height: 14px;
+            fill:white;
+        }
+
+        &__btnouter{
+            height:30px;
+            min-height: 30px;
+            padding:0px 10px;
+            border-radius: 6px;
+            background-color: var(--lighterAshBlue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__btntext{
+            color:white;
+            font-family: var(--poppins);
+            font-size: 0.7em;
+            font-weight: 500;
         }
     }
 </style>
