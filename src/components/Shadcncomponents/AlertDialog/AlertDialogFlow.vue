@@ -25,7 +25,7 @@ const handleCloseShowDialog=()=>{
 <template>
     <div class="alert_dialog_box">
         <div class="alert_dialog_box__dialogbox cursordiv" @click="handleToggleShowDialog">
-            <p class="alert_dialog_box__showdialogText">Show dialog</p>
+            <p :class="['alert_dialog_box__showdialogText', {'alert_dialog_box__showdialogText--redtext':props.destructive}]">{{props.destructive ? "Delete chat" : "Show dialog"}}</p>
         </div>
         <div v-if="showdialog_ref">
             <AlertDialogPopup
@@ -34,6 +34,7 @@ const handleCloseShowDialog=()=>{
                 :alert_title="props.alert_title"
                 :ok_button_title="props.ok_button_title"  
                 :cancel_button_title="props.cancel_button_title"
+                :destructive="props.destructive"
             />
         </div>
     </div>
@@ -62,6 +63,10 @@ const handleCloseShowDialog=()=>{
             font-family: var(--poppins);
             font-size: 0.8em;
             font-weight: 500;
+
+            &--redtext{
+                color:var(--pinkishred)
+            }
         }
     }
 </style>

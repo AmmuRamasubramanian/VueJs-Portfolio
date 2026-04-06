@@ -90,9 +90,9 @@ import AlertDialogFlow from './AlertDialog/AlertDialogFlow.vue';
     <div class="shadcncomppage__vertgap"></div>
     <div class="shadcncomppage__cardouter">
     <AlertDialogFlow
-      alert_text="This action cannot be undone. This will permanently delete your account from our servers."
-      alert_title="Are you absolutely sure?"
-      ok_button_title="Continue"
+      alert_text="This will permanently delete this chat conversation. View Settings delete any memories saved during this chat."
+      alert_title="Delete chat?"
+      ok_button_title="Delete"
       cancel_button_title="Cancel"
       :destructive="true"
     />

@@ -5,6 +5,7 @@ const props=defineProps<{
     alert_title:string,
     ok_button_title:string,
     cancel_button_title:string
+    destructive?:boolean
 }>()
 
 const emit=defineEmits<{
@@ -20,17 +21,20 @@ const handleClosePopup=()=>{
 <template>
     <div class="alertdialogPopupdiv" @click="handleClosePopup">
         <div class="alertdialogPopupdiv__popupinnerdiv" @click.stop>
-            <div class="alertdialogPopupdiv__titlediv">
-                <p class="alertdialogPopupdiv__titletxt">{{ props.alert_title }}</p>
-                <p class="alertdialogPopupdiv__subtitle">{{ props.alert_text }}</p>
+            <div :class="['alertdialogPopupdiv__titlediv', {'alertdialogPopupdiv__titlediv--centerdiv':props.destructive}]">
+                <div v-if="destructive" class="alertdialogPopupdiv__deleteBox">
+                    
+                </div>
+                <p :class="['alertdialogPopupdiv__titletxt',  {'alertdialogPopupdiv__titletxt--centerText':props.destructive}]">{{ props.alert_title }}</p>
+                <p :class="['alertdialogPopupdiv__subtitle',  {'alertdialogPopupdiv__subtitle--centerText':props.destructive}]">{{ props.alert_text }}</p>
             </div>
             <div class="alertdialogPopupdiv__buttondiv">
                 <div class="alertdialogPopupdiv__cancelbutton cursordiv" @click="handleClosePopup">
                     <p class="alertdialogPopupdiv__canceltext">Cancel</p>
                 </div>
                 <div :style="{ marginLeft:'6px' }"></div>
-                <div class="alertdialogPopupdiv__okbutton cursordiv" @click="handleClosePopup">
-                    <p class="alertdialogPopupdiv__oktext">Continue</p>
+                <div :class="['alertdialogPopupdiv__okbutton cursordiv',  {'alertdialogPopupdiv__okbutton--redbg':props.destructive}]" @click="handleClosePopup">
+                    <p class="alertdialogPopupdiv__oktext">{{props.destructive ? "Delete" : "Continue"}}</p>
                 </div>
             </div>
         </div>
@@ -52,7 +56,7 @@ const handleClosePopup=()=>{
         top:0;
 
         &__popupinnerdiv{
-            width:400px;
+            width:380px;
             background-color: var(--veryDrkGreyishBlue);
             border-width:0.8px;
             border-style: solid;
@@ -61,9 +65,28 @@ const handleClosePopup=()=>{
             overflow: hidden;
         }
 
+        &__deleteBox{
+            width:40px;
+            min-width:40px;
+            height:40px;
+            min-height: 40px;
+            background-color: #4a2728;
+            border-radius: 8px;
+            margin-bottom:15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
         &__titlediv{
             padding:16px 14px;
             padding-bottom: 10px;
+
+            &--centerdiv{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
         }
 
         &__titletxt{
@@ -71,6 +94,10 @@ const handleClosePopup=()=>{
             font-family: var(--poppins);
             font-size: 0.82em;
             font-weight: 500;
+
+            &--centerText{
+                text-align: center;
+            }
         }
 
         &__subtitle{
@@ -80,6 +107,10 @@ const handleClosePopup=()=>{
             font-weight: 400;
             margin-top:6px;
             line-height: 22px;
+
+            &--centerText{
+                text-align: center;
+            }
         }
 
         &__buttondiv{
@@ -106,6 +137,10 @@ const handleClosePopup=()=>{
             display: flex;
             align-items: center;
             justify-content: center;
+
+            &--redbg{
+                background-color: var(--btnRed);
+            }
         }
 
         &__oktext{
