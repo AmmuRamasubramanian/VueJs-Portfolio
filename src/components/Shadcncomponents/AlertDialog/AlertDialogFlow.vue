@@ -8,6 +8,7 @@ const props=defineProps<{
     ok_button_title:string,
     cancel_button_title:string
     destructive?:boolean
+    centertitle?:boolean
 }>()
 
 const showdialog_ref=ref<Boolean>(false)
@@ -35,6 +36,7 @@ const handleCloseShowDialog=()=>{
                 :ok_button_title="props.ok_button_title"  
                 :cancel_button_title="props.cancel_button_title"
                 :destructive="props.destructive"
+                :centertitle="props.centertitle"
             />
         </div>
     </div>

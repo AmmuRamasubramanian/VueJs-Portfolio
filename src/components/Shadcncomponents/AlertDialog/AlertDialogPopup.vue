@@ -7,6 +7,7 @@ const props=defineProps<{
     ok_button_title:string,
     cancel_button_title:string
     destructive?:boolean
+    centertitle?:boolean
 }>()
 
 const emit=defineEmits<{
@@ -22,12 +23,12 @@ const handleClosePopup=()=>{
 <template>
     <div class="alertdialogPopupdiv" @click="handleClosePopup">
         <div class="alertdialogPopupdiv__popupinnerdiv" @click.stop>
-            <div :class="['alertdialogPopupdiv__titlediv', {'alertdialogPopupdiv__titlediv--centerdiv':props.destructive}]">
+            <div :class="['alertdialogPopupdiv__titlediv', {'alertdialogPopupdiv__titlediv--centerdiv':props.centertitle}]">
                 <div v-if="destructive" class="alertdialogPopupdiv__deleteBox">
                     <Trash class="alertdialogPopupdiv__trashicon"/>
                 </div>
-                <p :class="['alertdialogPopupdiv__titletxt',  {'alertdialogPopupdiv__titletxt--centerText':props.destructive}]">{{ props.alert_title }}</p>
-                <p :class="['alertdialogPopupdiv__subtitle',  {'alertdialogPopupdiv__subtitle--centerText':props.destructive}]">{{ props.alert_text }}</p>
+                <p :class="['alertdialogPopupdiv__titletxt',  {'alertdialogPopupdiv__titletxt--centerText':props.centertitle}]">{{ props.alert_title }}</p>
+                <p :class="['alertdialogPopupdiv__subtitle',  {'alertdialogPopupdiv__subtitle--centerText':props.centertitle}]">{{ props.alert_text }}</p>
             </div>
             <div class="alertdialogPopupdiv__buttondiv">
                 <div class="alertdialogPopupdiv__cancelbutton cursordiv" @click="handleClosePopup">

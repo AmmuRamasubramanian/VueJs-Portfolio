@@ -84,7 +84,7 @@ import AlertDialogFlow from './AlertDialog/AlertDialogFlow.vue';
     />
     </div>
 
-     <div class="shadcncomppage__titlegap"></div>
+    <div class="shadcncomppage__titlegap"></div>
     <p class="shadcncomppage__title">Destructive</p>
     <p class="shadcncomppage__subtitle">Use the component to add a destructive action button to the alert dialog.</p>
     <div class="shadcncomppage__vertgap"></div>
@@ -95,6 +95,22 @@ import AlertDialogFlow from './AlertDialog/AlertDialogFlow.vue';
       ok_button_title="Delete"
       cancel_button_title="Cancel"
       :destructive="true"
+      :centertitle="true"
+    />
+    </div>
+
+    <div class="shadcncomppage__titlegap"></div>
+    <p class="shadcncomppage__title">Small Alert dialog</p>
+    <p class="shadcncomppage__subtitle">Use the size="sm" prop to make the alert dialog smaller.</p>
+    <div class="shadcncomppage__vertgap"></div>
+    <div class="shadcncomppage__cardouter">
+    <AlertDialogFlow
+      alert_text="This will permanently delete this chat conversation. View Settings delete any memories saved during this chat."
+      alert_title="Delete chat?"
+      ok_button_title="Delete"
+      cancel_button_title="Cancel"
+      :smallsize="true"
+      :centertitle="true"
     />
     </div>
 </div>
