@@ -22,7 +22,7 @@ const handleClosePopup=()=>{
 
 <template>
     <div class="alertdialogPopupdiv" @click="handleClosePopup">
-        <div class="alertdialogPopupdiv__popupinnerdiv" @click.stop>
+        <div :class="['alertdialogPopupdiv__popupinnerdiv', {'alertdialogPopupdiv__popupinnerdiv--smallsizebox':props.centertitle}]" @click.stop>
             <div :class="['alertdialogPopupdiv__titlediv', {'alertdialogPopupdiv__titlediv--centerdiv':props.centertitle}]">
                 <div v-if="destructive" class="alertdialogPopupdiv__deleteBox">
                     <Trash class="alertdialogPopupdiv__trashicon"/>
@@ -32,11 +32,11 @@ const handleClosePopup=()=>{
             </div>
             <div class="alertdialogPopupdiv__buttondiv">
                 <div class="alertdialogPopupdiv__cancelbutton cursordiv" @click="handleClosePopup">
-                    <p class="alertdialogPopupdiv__canceltext">Cancel</p>
+                    <p class="alertdialogPopupdiv__canceltext">{{props.cancel_button_title}}</p>
                 </div>
                 <div :style="{ marginLeft:'6px' }"></div>
                 <div :class="['alertdialogPopupdiv__okbutton cursordiv',  {'alertdialogPopupdiv__okbutton--redbg':props.destructive}]" @click="handleClosePopup">
-                    <p class="alertdialogPopupdiv__oktext">{{props.destructive ? "Delete" : "Continue"}}</p>
+                    <p class="alertdialogPopupdiv__oktext">{{ props.ok_button_title }}</p>
                 </div>
             </div>
         </div>
@@ -65,6 +65,10 @@ const handleClosePopup=()=>{
             border-color: var(--lighterAshBlue);
             border-radius: 10px;
             overflow: hidden;
+
+            &--smallsizebox{
+                width:300px;
+            }
         }
 
         &__deleteBox{

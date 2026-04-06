@@ -105,10 +105,10 @@ import AlertDialogFlow from './AlertDialog/AlertDialogFlow.vue';
     <div class="shadcncomppage__vertgap"></div>
     <div class="shadcncomppage__cardouter">
     <AlertDialogFlow
-      alert_text="This will permanently delete this chat conversation. View Settings delete any memories saved during this chat."
-      alert_title="Delete chat?"
-      ok_button_title="Delete"
-      cancel_button_title="Cancel"
+      alert_text="Do you want to allow the USB accessory to connect to this device?"
+      alert_title="Allow accessory to connect?"
+      ok_button_title="Allow"
+      cancel_button_title="Don't allow"
       :smallsize="true"
       :centertitle="true"
     />
