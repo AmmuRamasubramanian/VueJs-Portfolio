@@ -26,7 +26,7 @@ const props=defineProps<Props>()
         <div v-if="!props.withbtn">
         <ChevronRight class="linkcomp__chevronRightIcon"/>
         </div>
-        <div class="linkcomp__btnouter cursordiv" v-if="props.withbtn">
+        <div class="linkcomp__btnouter cursordiv" v-else>
             <p class="linkcomp__btntext">{{ props.btnTitle }}</p>
         </div>
     </div>
