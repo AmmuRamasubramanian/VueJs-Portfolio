@@ -124,6 +124,12 @@ import LinkComp from './Link/LinkComp.vue';
       title="Visit our document"
       subtitle="Learn how to get started with our components."
     />
+    <div :style="{marginTop:'10px'}"></div>
+    <LinkComp
+      title="Visit our document"
+      subtitle="Learn how to get started with our components."
+      :withoutbg="true"
+    />
     </div>
     </div>
 </div>

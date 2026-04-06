@@ -1,8 +1,11 @@
 <script setup lang="ts">
 
+import ChevronRight from '../../../assets/chevronright.svg'
+
 interface Props{
     title:string
     subtitle:string
+    withoutbg?:boolean
 }
 
 const props=defineProps<Props>()
@@ -10,11 +13,12 @@ const props=defineProps<Props>()
 </script>
 
 <template>
-    <div class="linkcomp">
+    <div :class="['linkcomp cursordiv', {'linkcomp--withnobg':props.withoutbg}]">
         <div class="linkcomp__titlediv">
         <p class="linkcomp__title">{{ props.title }}</p>
         <p class="linkcomp__subtitle">{{ props.subtitle }}</p>
         </div>
+        <ChevronRight class="linkcomp__chevronRightIcon"/>
     </div>
 </template>
 
@@ -29,6 +33,13 @@ const props=defineProps<Props>()
         border-width: 0.8px;
         padding:14px 16px;
         border-radius: 10px;
+
+        &--withnobg{
+            background-color: transparent;
+            &:hover{
+                background-color: var(--veryDrkBlue2);
+            }
+        }
 
         &__titlediv{
             display: flex;
@@ -64,6 +75,14 @@ const props=defineProps<Props>()
             overflow: hidden;
             word-break: break-all;
             flex: 1;
+        }
+
+        &__chevronRightIcon{
+            width:14px;
+            height:14px;
+            min-width: 14px;
+            min-height: 14px;
+            fill:white;
         }
     }
 </style>
