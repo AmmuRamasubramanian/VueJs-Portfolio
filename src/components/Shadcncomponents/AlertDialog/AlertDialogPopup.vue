@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Trash from '../../../assets/trash.svg'
 
 const props=defineProps<{
     alert_text:string,
@@ -23,7 +24,7 @@ const handleClosePopup=()=>{
         <div class="alertdialogPopupdiv__popupinnerdiv" @click.stop>
             <div :class="['alertdialogPopupdiv__titlediv', {'alertdialogPopupdiv__titlediv--centerdiv':props.destructive}]">
                 <div v-if="destructive" class="alertdialogPopupdiv__deleteBox">
-                    
+                    <Trash class="alertdialogPopupdiv__trashicon"/>
                 </div>
                 <p :class="['alertdialogPopupdiv__titletxt',  {'alertdialogPopupdiv__titletxt--centerText':props.destructive}]">{{ props.alert_title }}</p>
                 <p :class="['alertdialogPopupdiv__subtitle',  {'alertdialogPopupdiv__subtitle--centerText':props.destructive}]">{{ props.alert_text }}</p>
@@ -76,6 +77,14 @@ const handleClosePopup=()=>{
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+
+        &__trashicon{
+            width:19px;
+            height:19px;
+            min-width: 19px;
+            min-height: 19px;
+            fill:var(--pinkishred);
         }
 
         &__titlediv{
