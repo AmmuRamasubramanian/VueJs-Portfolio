@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import BasicAccordianFlow from './Accordian/BasicAccordianFlow.vue';
 import AlertAccordianFlow from './Alert/AlertAccordianFlow.vue';
+import AlertDialogFlow from './AlertDialog/AlertDialogFlow.vue';
 
 </script>
 
@@ -69,6 +70,19 @@ import AlertAccordianFlow from './Alert/AlertAccordianFlow.vue';
     />
     </div>
     </div>
+
+    <div class="shadcncomppage__titlegap"></div>
+    <p class="shadcncomppage__title">Alert Dialog</p>
+    <p class="shadcncomppage__subtitle">A modal dialog that interrupts the user with important content and expects a response.</p>
+    <div class="shadcncomppage__vertgap"></div>
+    <div class="shadcncomppage__cardouter">
+    <AlertDialogFlow
+      alert_text="This action cannot be undone. This will permanently delete your account from our servers."
+      alert_title="Are you absolutely sure?"
+      ok_button_title="Continue"
+      cancel_button_title="Cancel"
+    />
+    </div>
 </div>
 </template>
 
@@ -80,6 +94,7 @@ import AlertAccordianFlow from './Alert/AlertAccordianFlow.vue';
     padding-top:3em;
     padding-bottom: 6em;
     align-self: center;
+    position: relative;
 
     &__contentinnerDiv{
       width:500px;  
@@ -121,6 +136,7 @@ import AlertAccordianFlow from './Alert/AlertAccordianFlow.vue';
       border-style: solid;
       border-radius: 12px;
       border-color: var(--lightishwhite);
+      width:100%;
     }
 
     &__subtitle{
