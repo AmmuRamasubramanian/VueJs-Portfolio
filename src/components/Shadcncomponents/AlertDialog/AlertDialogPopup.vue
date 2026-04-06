@@ -8,6 +8,7 @@ const props=defineProps<{
     cancel_button_title:string
     destructive?:boolean
     centertitle?:boolean
+    smallsize?:boolean
 }>()
 
 const emit=defineEmits<{
@@ -31,11 +32,11 @@ const handleClosePopup=()=>{
                 <p :class="['alertdialogPopupdiv__subtitle',  {'alertdialogPopupdiv__subtitle--centerText':props.centertitle}]">{{ props.alert_text }}</p>
             </div>
             <div class="alertdialogPopupdiv__buttondiv">
-                <div class="alertdialogPopupdiv__cancelbutton cursordiv" @click="handleClosePopup">
+                <div :class="['alertdialogPopupdiv__cancelbutton cursordiv', {'alertdialogPopupdiv__cancelbutton--fullwidth':props.smallsize}]" @click="handleClosePopup">
                     <p class="alertdialogPopupdiv__canceltext">{{props.cancel_button_title}}</p>
                 </div>
                 <div :style="{ marginLeft:'6px' }"></div>
-                <div :class="['alertdialogPopupdiv__okbutton cursordiv',  {'alertdialogPopupdiv__okbutton--redbg':props.destructive}]" @click="handleClosePopup">
+                <div :class="['alertdialogPopupdiv__okbutton cursordiv',  {'alertdialogPopupdiv__okbutton--redbg':props.destructive, 'alertdialogPopupdiv__okbutton--fullwidth':props.smallsize}]" @click="handleClosePopup">
                     <p class="alertdialogPopupdiv__oktext">{{ props.ok_button_title }}</p>
                 </div>
             </div>
@@ -155,6 +156,10 @@ const handleClosePopup=()=>{
             &--redbg{
                 background-color: var(--btnRed);
             }
+
+            &--fullwidth{
+                width:48.5%;
+            }
         }
 
         &__oktext{
@@ -176,6 +181,10 @@ const handleClosePopup=()=>{
             display: flex;
             align-items: center;
             justify-content: center;
+
+            &--fullwidth{
+                width:48.5%
+            }
         }
 
         &__canceltext{
