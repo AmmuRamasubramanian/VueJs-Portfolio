@@ -25,11 +25,11 @@ const handleClosePopup=()=>{
                 <p class="alertdialogPopupdiv__subtitle">{{ props.alert_text }}</p>
             </div>
             <div class="alertdialogPopupdiv__buttondiv">
-                <div class="alertdialogPopupdiv__cancelbutton cursordiv">
+                <div class="alertdialogPopupdiv__cancelbutton cursordiv" @click="handleClosePopup">
                     <p class="alertdialogPopupdiv__canceltext">Cancel</p>
                 </div>
                 <div :style="{ marginLeft:'6px' }"></div>
-                <div class="alertdialogPopupdiv__okbutton cursordiv">
+                <div class="alertdialogPopupdiv__okbutton cursordiv" @click="handleClosePopup">
                     <p class="alertdialogPopupdiv__oktext">Continue</p>
                 </div>
             </div>
