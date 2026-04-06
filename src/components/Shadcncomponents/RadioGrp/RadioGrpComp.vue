@@ -23,9 +23,9 @@ const handleSelectOption=(value:string)=>{
             :key="item"
         >
             <div :class="['radiogrp__itemdiv cursordiv', {'radiogrp__itemdiv--topstyle':index!==0}]" @click="handleSelectOption(item)">
-                <div v-if="selectedOption===item" class="radiogrp__radiobtn">
+                <div v-if="selectedOption!==item" class="radiogrp__radiobtn">
                 </div>
-                <div v-if="selectedOption!==item" class="radiogrp__selectedRadioBtn">
+                <div v-else class="radiogrp__selectedRadioBtn">
                     <div class="radiogrp__selectedRadioBtnInner"></div>
                 </div>
                 <p class="radiogrp__itemtext">{{ item }}</p>
