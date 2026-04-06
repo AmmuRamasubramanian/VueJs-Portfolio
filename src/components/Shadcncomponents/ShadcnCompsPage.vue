@@ -2,6 +2,7 @@
 import BasicAccordianFlow from './Accordian/BasicAccordianFlow.vue';
 import AlertAccordianFlow from './Alert/AlertAccordianFlow.vue';
 import AlertDialogFlow from './AlertDialog/AlertDialogFlow.vue';
+import LinkComp from './Link/LinkComp.vue';
 
 </script>
 
@@ -69,7 +70,7 @@ import AlertDialogFlow from './AlertDialog/AlertDialogFlow.vue';
       :destructive="true"
     />
     </div>
-    </div>
+    
 
     <div class="shadcncomppage__titlegap"></div>
     <p class="shadcncomppage__title">Alert Dialog</p>
@@ -113,6 +114,18 @@ import AlertDialogFlow from './AlertDialog/AlertDialogFlow.vue';
       :centertitle="true"
     />
     </div>
+
+    <div class="shadcncomppage__titlegap"></div>
+    <p class="shadcncomppage__title">Link</p>
+    <p class="shadcncomppage__subtitle">Use the asChild prop to render the item as a link. The hover and focus states will be applied to the anchor element.</p>
+    <div class="shadcncomppage__vertgap"></div>
+    <div class="shadcncomppage__cardouter">
+    <LinkComp
+      title="Visit our document"
+      subtitle="Learn how to get started with our components."
+    />
+    </div>
+    </div>
 </div>
 </template>
 
@@ -128,6 +141,7 @@ import AlertDialogFlow from './AlertDialog/AlertDialogFlow.vue';
 
     &__contentinnerDiv{
       width:500px;  
+      max-width:500px;
 
       @media(max-width:470px){
         width: 100%;
