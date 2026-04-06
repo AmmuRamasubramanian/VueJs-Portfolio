@@ -4,6 +4,7 @@ import AlertAccordianFlow from './Alert/AlertAccordianFlow.vue';
 import AlertDialogFlow from './AlertDialog/AlertDialogFlow.vue';
 import LinkComp from './Link/LinkComp.vue';
 import Shield from '../../assets/shield.svg'
+import RadioGrpComp from './RadioGrp/RadioGrpComp.vue';
 
 </script>
 
@@ -121,25 +122,36 @@ import Shield from '../../assets/shield.svg'
     <p class="shadcncomppage__subtitle">Use the asChild prop to render the item as a link. The hover and focus states will be applied to the anchor element.</p>
     <div class="shadcncomppage__vertgap"></div>
     <div class="shadcncomppage__cardouter">
-    <LinkComp
-      title="Visit our document"
-      subtitle="Learn how to get started with our components."
-    />
-    <div :style="{marginTop:'10px'}"></div>
-    <LinkComp
-      title="Visit our document"
-      subtitle="Learn how to get started with our components."
-      :withoutbg="true"
-    />
-    <div :style="{marginTop:'10px'}"></div>
-    <LinkComp
-      title="Security Alert"
-      subtitle="New login detected from unknown device."
-      :withbtn="true"
-      btnTitle="Review"
-      :btnicon="Shield"
+      <LinkComp
+        title="Visit our document"
+        subtitle="Learn how to get started with our components."
+      />
+      <div :style="{marginTop:'10px'}"></div>
+      <LinkComp
+        title="Visit our document"
+        subtitle="Learn how to get started with our components."
+        :withoutbg="true"
+      />
+      <div :style="{marginTop:'10px'}"></div>
+      <LinkComp
+        title="Security Alert"
+        subtitle="New login detected from unknown device."
+        :withbtn="true"
+        btnTitle="Review"
+        :btnicon="Shield"
+      />
+    </div>
+
+    <div class="shadcncomppage__titlegap"></div>
+    <p class="shadcncomppage__title">Radio group</p>
+    <p class="shadcncomppage__subtitle">A set of checkable buttons—known as radio buttons—where no more than one of the buttons can be checked at a time.</p>
+    <div class="shadcncomppage__vertgap"></div>
+    <div class="shadcncomppage__cardouter">
+    <RadioGrpComp
+      :options="['default', 'comfortable', 'compact']"
     />
     </div>
+
     </div>
 </div>
 </template>
