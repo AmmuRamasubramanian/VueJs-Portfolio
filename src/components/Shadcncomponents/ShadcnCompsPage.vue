@@ -83,6 +83,20 @@ import AlertDialogFlow from './AlertDialog/AlertDialogFlow.vue';
       cancel_button_title="Cancel"
     />
     </div>
+
+     <div class="shadcncomppage__titlegap"></div>
+    <p class="shadcncomppage__title">Destructive</p>
+    <p class="shadcncomppage__subtitle">Use the component to add a destructive action button to the alert dialog.</p>
+    <div class="shadcncomppage__vertgap"></div>
+    <div class="shadcncomppage__cardouter">
+    <AlertDialogFlow
+      alert_text="This action cannot be undone. This will permanently delete your account from our servers."
+      alert_title="Are you absolutely sure?"
+      ok_button_title="Continue"
+      cancel_button_title="Cancel"
+      :destructive="true"
+    />
+    </div>
 </div>
 </template>
 

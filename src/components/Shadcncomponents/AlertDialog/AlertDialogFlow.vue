@@ -7,6 +7,7 @@ const props=defineProps<{
     alert_title:string,
     ok_button_title:string,
     cancel_button_title:string
+    destructive?:boolean
 }>()
 
 const showdialog_ref=ref<Boolean>(false)
@@ -24,7 +25,7 @@ const handleCloseShowDialog=()=>{
 <template>
     <div class="alert_dialog_box">
         <div class="alert_dialog_box__dialogbox cursordiv" @click="handleToggleShowDialog">
-        <p class="alert_dialog_box__showdialogText">Show dialog</p>
+            <p class="alert_dialog_box__showdialogText">Show dialog</p>
         </div>
         <div v-if="showdialog_ref">
             <AlertDialogPopup
